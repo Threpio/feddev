@@ -1,0 +1,20 @@
+---
+
+- hosts: localhost
+  roles:
+    - cleanup
+    - common
+    
+    - brave
+    - fish
+    
+    - development-tools
+    - dotnet-core
+    - docker
+    
+    - os-configuration
+    - dash-to-dock
+    - suru-theme
+    
+  vars_files:
+    - vars.yml

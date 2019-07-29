@@ -1,0 +1,40 @@
+---
+
+- name: Install fish shell
+  package:
+    name: 
+      - git
+      - curl
+      - fish
+      - fzf
+    state: latest
+  become: yes
+
+- name: Ensure fish folder exists in .config
+  file:
+    path: /home/{{ansible_user}}/.config/fish
+    state: directory
+
+- name: Create config.fish file
+  template: 
+    src: config_fish.j2
+    dest: "/home/{{ansible_user}}/.config/fish/config.fish"
+
+- name: Install fisher
+  shell: 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish'
+  args:
+    warn: false
+
+- name: Install pure theme
+  shell: 'fisher add rafaelrinaldi/pure'
+  args:
+    executable: /usr/bin/fish
+
+- name: Install fzf plugin
+  shell: 'fisher add jethrokuan/fzf'
+  args:
+    executable: /usr/bin/fish
+
+- name: Set fish as default shell
+  command: "usermod -s /usr/bin/fish {{ansible_user}}"
+  become: yes

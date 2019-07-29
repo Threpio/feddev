@@ -1,0 +1,12 @@
+---
+
+- name: Install common packages
+  package: 
+     name: 
+       - git
+       - flatpak
+       - vim
+       - htop
+       - exa
+     state: latest
+  become: yes

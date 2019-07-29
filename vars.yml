@@ -1,0 +1,20 @@
+--- 
+
+machine_hostname: DevHost1
+
+git_name: Theo Andresier
+git_email: theomorris@hotmail.co.uk
+
+fish_aliases:
+  - alias: code
+    command: "flatpak run com.visualstudio.code"
+	
+dotnet_core_sdk_version: 2.2
+
+flatpak_urls: 
+   - https://flathub.org/repo/appstream/org.videolan.VLC.flatpakref
+   - https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
+   - https://flathub.org/repo/appstream/com.visualstudio.code.flatpakref
+   - https://flathub.org/repo/appstream/com.skype.Client.flatpakref
+   - https://flathub.org/repo/appstream/com.jetbrains.DataGrip.flatpakref
+   - https://flathub.org/repo/appstream/app.rednotebook.RedNotebook.flatpakref
