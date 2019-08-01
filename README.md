@@ -1,5 +1,5 @@
 # feddev
-## Useable by Theo Andresier as a Fedora Developement machine setup script that is automated through Ansible. 
+## Used by Threpio as a Fedora Developement machine setup script that is automated through Ansible. 
 
 This script has a variables file that is defined by what is needed by my current work environment.
 
